@@ -2,16 +2,14 @@ node('master')
 
 {
 
-stage('Continuous Download_loans') 
-   
-	 {
-	
+stage('ContinuousDownload_loans')
+         {
     git 'https://github.com/sunildevops77/maven.git'
-    
-	}
-stage('Continuous build_loans') 
-   
-	 {
-	echo 'mvn package'
-	}
+        }
+
+stage('Continuousbuild_loans')
+         {
+   sh label: '', script: 'mvn package'
+        }
+
 }
